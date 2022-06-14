@@ -22,7 +22,7 @@ const Video = () => {
     <div className={styles.video}>
       <video
         src="https://res.cloudinary.com/dxkxvfo2o/video/upload/v1608169738/video1_cvrjfm.mp4"
-        className={styles.videPlayer}
+        className={styles.videoPlayer}
         loop
         ref={videoRef}
         onClick={handleVideoPress}
