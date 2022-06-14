@@ -4,18 +4,19 @@ html{
 
 .app{
     height: 100vh;
+    max-height: 900px;
     background-color: black;
     display: grid;
     place-items: center;
 }
 
-.videos source{
+.videos{
     margin: 30px;
     position: relative;
-    height: 500px;
+    height: 600px;
     border-radius: 20px;
     overflow: scroll;
-    width: 80%;
+    width: fit-content;
     max-width: 500px;
     scroll-snap-type: y mandatory;
 }
