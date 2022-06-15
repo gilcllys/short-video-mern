@@ -53,7 +53,7 @@
     left: 50px;
     bottom: 1px;
     letter-spacing: 1px;
-    animation: Ticker infinite 3s linear;
+    animation: Ticker infinite 4s linear;
 }
 
 @keyframes Ticker {
