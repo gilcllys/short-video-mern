@@ -12,8 +12,8 @@ const VideoFooter = () => {
         <p>Macbook Air to new Windows editing beast</p>
         <div className={styles.videoFooterTicker}>
           <MusicNoteIcon className={styles.videoFooterIcon} />
-          <Ticker mode='smooth'>
-              {() =>(
+          <Ticker className={styles.ticker} mode='smooth'>
+              {({index}) =>(
                 <>
                   <p>I am a Windows PC</p>
                 </>
@@ -21,7 +21,7 @@ const VideoFooter = () => {
           </Ticker>
         </div>
       </div>
-      <img src='../Assets/noun-vinyl-477519.png' alt="video Footer" />
+      <img className={styles.videoFooterRecord} src="../src/Assets/disk.png" alt="video Footer"/>
     </div>
   )
 }
