@@ -5,7 +5,7 @@ import FavoriteBoderIcon from "@mui/icons-material/FavoriteBorder";
 import MessageIcon from "@mui/icons-material/Message";
 import ShareIcon from "@mui/icons-material/Share";
 
-const VideoSideBar = () => {
+const VideoSideBar = ({likes, shares, messages}) => {
   const [liked, setLiked] = React.useState(false);
 
   return (
@@ -16,17 +16,17 @@ const VideoSideBar = () => {
         ) : (
           <FavoriteBoderIcon fontSize="large" onClick={(e) => setLiked(true)} />
         )}
-        <p>{liked ? 101 : 100}</p>
+        <p>{liked ? likes + 1 : likes}</p>
       </div>
 
       <div className={styles.sideBarButton}>
         <MessageIcon fontSize="large" />
-        <p>345</p>
+        <p>{messages}</p>
       </div>
 
       <div className={styles.sideBarButton}>
         <ShareIcon fontSize="large" />
-        <p>109</p>
+        <p>{shares}</p>
       </div>
     </div>
   );
