@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Video.module.css";
 import VideoFooter from "./VideoFooter";
+import VideoSideBar from "./VideoSideBar";
 
 const Video = () => {
   const [playing, setPlaying] = React.useState(false);
@@ -28,6 +29,7 @@ const Video = () => {
         onClick={handleVideoPress}
       ></video>
       <VideoFooter />
+      <VideoSideBar />
     </div>
   );
 };

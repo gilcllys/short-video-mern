@@ -15,7 +15,6 @@
 
 .videoFooterRecord{
     position: absolute;
-    z-index: 100;
     height: 50px;
     top: 580px;
     left: 425px;
