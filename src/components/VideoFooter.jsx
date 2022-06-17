@@ -18,7 +18,7 @@ const VideoFooter = ({channel, description, song}) => {
       </div>
       <img
         className={styles.videoFooterRecord}
-        src="../src/Assets/disk.png"
+        src="./src/Assets/disk.png"
         alt="video Footer"
       />
     </div>
