@@ -1,1 +1,1 @@
-# short-video-frontend
+# Aplicação Mern inspirada na tela do instagram
