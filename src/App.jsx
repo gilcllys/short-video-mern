@@ -5,25 +5,35 @@ import styles from "./App.module.css";
 //
 
 function App() {
+  const [videos, setVideos] = React.useState([]);
+
+  React.useEffect(() => {
+    async function fetchData() {
+      const data = await fetch(
+        "https://short-video-mern-app.herokuapp.com/v2/posts"
+      );
+      const json = await data.json();
+      setVideos(json);
+    }
+    fetchData();
+  }, []);
+  console.log(videos);
+
   return (
     <div className={styles.app}>
       <div className={styles.videos}>
-        <Video url="https://res.cloudinary.com/dxkxvfo2o/video/upload/v1608169738/video1_cvrjfm.mp4"
-        channel='nabendu82' 
-        description='Macbook Air to new Windows editing beast'
-        song='I am a Windows PC'
-        likes={345}
-        shares={200}
-        messages={90}
-        />
-        <Video url="https://res.cloudinary.com/dxkxvfo2o/video/upload/v1608169738/video2_mecbdo.mp4"
-        channel='thewebdev' 
-        description='Tuesdaay morning editing on kdenlive in windows'
-        song='Kdenlive is great'
-        likes={445}
-        shares={290}
-        messages={109}
-        />
+        {videos.map(
+          ({ url, channel, description, songs, likes, shares, messages }) => (
+            <Video
+              url={url}
+              channel={channel}
+              description={description}
+              song={songs}
+              likes={likes}
+              shares={shares}
+              messages={messages}
+            />
+          ))}
       </div>
     </div>
   );
